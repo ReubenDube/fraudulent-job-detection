@@ -1,60 +1,68 @@
-# Fraudulent Job Detection - Machine Learning Model
+# Fraudulent Job Detection using Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-7B4DFF?style=for-the-badge&logo=xgboost&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-**End-to-end Machine Learning project** to detect fraudulent job postings using the cleaned data from my ETL pipeline.
+**End-to-end Machine Learning project** to detect fraudulent job postings.
 
-##  Project Overview
-Built a classification model to predict whether a job posting is fraudulent or legitimate. 
-Achieved **ROC-AUC of 0.9510** and **72% recall** on fraudulent jobs.
+Built on top of my [Job Postings ETL Pipeline](../job-postings-etl-pipeline).
 
-##  Technologies Used
-- Python, Pandas, Scikit-learn
-- XGBoost (Best performing model)
-- SQLAlchemy (loading data from ETL)
-- Joblib (model persistence)
-- Matplotlib & Seaborn (visualization)
-
-##  Key Results
+## 📊 Project Highlights
+- **Best Model**: XGBoost
 - **ROC-AUC Score**: 0.9510
 - **Fraud Recall**: 0.72 (catches 72% of fraudulent jobs)
-- **Fraud Precision**: 0.66
-- Trained on 17,880 job postings (4.84% fraud rate)
+- Handled severe class imbalance (only 4.84% fraudulent cases)
+- Feature engineering from raw job text and metadata
 
-##  How to Run
+## 🛠️ Technologies
+- Python, Pandas, Scikit-learn
+- XGBoost Classifier
+- SQLAlchemy (data loading)
+- Matplotlib / Seaborn (visualization)
+- Joblib (model persistence)
+
+## 🚀 How to Run
 
 ```bash
-# 1. Activate environment
+# 1. Clone the repo
+git clone https://github.com/ReubenDube/fraudulent-job-detection.git
+cd fraudulent-job-detection
+
+# 2. Activate virtual environment
 venv\Scripts\activate
 
-# 2. Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run the improved model
+# 4. Train / Run the model
 cd scripts
 python improved_model_training.py
 
-```
 
+Key Results
 
-Skills Demonstrated
+Trained on 17,880 job postings
+Strong performance on imbalanced fraud detection task
+Clear feature importance analysis
 
-End-to-end ML pipeline (EDA → Feature Engineering → Modeling → Evaluation)
+🔗 Project Connection
+This project builds directly on my Job Postings ETL Pipeline, demonstrating a complete Data Engineering → Machine Learning workflow.
+
+🎯 Skills Demonstrated
+
+End-to-end ML pipeline development
 Handling class imbalance in fraud detection
 Feature engineering and importance analysis
-Model training with XGBoost
-Reusing data from previous ETL project
+Model evaluation using proper metrics (ROC-AUC, Precision, Recall)
+Reproducible project structure
 
-🔗 Connection to Project 1
-This project builds directly on the Job Postings ETL Pipeline — demonstrating a full data-to-model workflow.
-🔮 Future Improvements
+🔮 Future Work
 
-Text-based features using TF-IDF or embeddings (description, title)
-Hyperparameter tuning with Optuna
-Deployment as a web app (Streamlit predictor)
+Text vectorization (TF-IDF / embeddings) on job description/title
+Model deployment as a Streamlit web app
 API integration with Job Portal
 
 
-Made as part of my Data Scientist / ML Engineer portfolio
+Part of my Data Scientist / ML Engineer Portfolio
