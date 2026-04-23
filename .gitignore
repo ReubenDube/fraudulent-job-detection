@@ -4,3 +4,5 @@
 "__pycache__/" 
 "*.pyc" 
 "models/*.joblib"    # We'll add model later if needed
+"data/job_postings.db" 
+"*.db" 
