@@ -1,0 +1,6 @@
+"data/job_postings.db" 
+"*.db" 
+"venv/" 
+"__pycache__/" 
+"*.pyc" 
+"models/*.joblib"    # We'll add model later if needed
