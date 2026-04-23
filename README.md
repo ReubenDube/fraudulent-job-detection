@@ -2,31 +2,28 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-7B4DFF?style=for-the-badge&logo=xgboost&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-**End-to-end Machine Learning project** to detect fraudulent job postings.
+**End-to-end Machine Learning project** that detects fraudulent job postings with **high accuracy**.
 
-Built on top of my [Job Postings ETL Pipeline](../job-postings-etl-pipeline).
+Live Demo: Streamlit Prediction App
 
-## 📊 Project Highlights
+## 📊 Key Results
 - **Best Model**: XGBoost
 - **ROC-AUC Score**: 0.9510
-- **Fraud Recall**: 0.72 (catches 72% of fraudulent jobs)
-- Handled severe class imbalance (only 4.84% fraudulent cases)
-- Feature engineering from raw job text and metadata
+- **Fraud Recall**: 0.72 (catches 72% of actual fraudulent jobs)
+- Trained on 17,880 job postings (4.84% fraud rate)
 
-## 🛠️ Technologies
-- Python, Pandas, Scikit-learn
-- XGBoost Classifier
-- SQLAlchemy (data loading)
-- Matplotlib / Seaborn (visualization)
-- Joblib (model persistence)
+## ✨ Features
+- Interactive **Streamlit Web App** for real-time fraud prediction
+- Handles severe class imbalance
+- Feature engineering from job metadata and text length
+- Clear model explainability (feature importance)
 
 ## 🚀 How to Run
 
 ```bash
-# 1. Clone the repo
+# 1. Clone the repository
 git clone https://github.com/ReubenDube/fraudulent-job-detection.git
 cd fraudulent-job-detection
 
@@ -36,33 +33,24 @@ venv\Scripts\activate
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Train / Run the model
-cd scripts
-python improved_model_training.py
+# 4. Run the prediction app
+streamlit run app.py
 
 
-Key Results
+🛠️ Technologies Used
 
-Trained on 17,880 job postings
-Strong performance on imbalanced fraud detection task
-Clear feature importance analysis
+XGBoost – Main model
+Pandas + Scikit-learn – Data processing
+Streamlit – Interactive web interface
+SQLAlchemy – Data loading from ETL pipeline
 
-🔗 Project Connection
-This project builds directly on my Job Postings ETL Pipeline, demonstrating a complete Data Engineering → Machine Learning workflow.
+🔗 Connection to Project 1
+This project builds directly on my Job Postings ETL Pipeline, showing a complete Data Engineering → Machine Learning workflow.
 
 🎯 Skills Demonstrated
 
 End-to-end ML pipeline development
-Handling class imbalance in fraud detection
-Feature engineering and importance analysis
-Model evaluation using proper metrics (ROC-AUC, Precision, Recall)
-Reproducible project structure
-
-🔮 Future Work
-
-Text vectorization (TF-IDF / embeddings) on job description/title
-Model deployment as a Streamlit web app
-API integration with Job Portal
-
-
-Part of my Data Scientist / ML Engineer Portfolio
+Handling imbalanced classification problems
+Feature engineering and model interpretation
+Building interactive data applications with Streamlit
+Reproducible and well-documented projects
